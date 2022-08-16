@@ -8,12 +8,10 @@ namespace Day9_EmployeeWage
 {
     public class EmployeeWage
     {
-        public bool IsPresent()
+        public int IsPresent()
         {
             Random random = new Random();
-            if(random.Next(0,2) == 1)
-                return true;
-            return false;
+            return random.Next(0,3);
         }
 
         public int DailyWage(int hour,int wage)
