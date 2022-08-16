@@ -13,27 +13,26 @@
             int partTimeHour = 4;
             int wagePerHour = 20;
             int workingHour = 0;
-            int day = 0;
+            int workingDay = 0;
 
 
             EmployeeWage Employee = new();
-            for (int i = 1; i <= 20; i++)
+            while (workingHour<=100 || workingDay<=20)
             {
                 switch (Employee.IsPresent())
                 {
                     case 0:
-                        Console.WriteLine(day+"  Employee is Absent\n");
-                       day++;i--;
+                        Console.WriteLine("  Employee is Absent\n");
                         break;
                     case 1:
-                        Console.WriteLine(day+"  Employee is Present for Part time");
+                        Console.WriteLine("  Employee is Present for Part time");
                         Console.WriteLine("Employees todays wage is : " + Employee.DailyWage(partTimeHour, wagePerHour)+"\n");
-                        workingHour += 4; day++;
+                        workingHour += 4; workingDay++;
                         break;
                     case 2:
-                        Console.WriteLine(day+"  Employee is Present");
+                        Console.WriteLine("  Employee is Present");
                         Console.WriteLine("Employees todays wage is : " + Employee.DailyWage(fullDayHour, wagePerHour)+"\n");
-                        workingHour += 8; day++;
+                        workingHour += 8; workingDay++;
                         break;
                 }
 
