@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Day9_EmployeeWage
 {
-    internal class EmployeeWage
+    public class EmployeeWage
     {
+        public bool IsPresent()
+        {
+            Random random = new Random();
+            if(random.Next(0,2) == 1)
+                return true;
+            return false;
+        }
+
     }
 }
