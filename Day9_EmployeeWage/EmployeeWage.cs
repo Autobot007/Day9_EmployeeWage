@@ -16,5 +16,10 @@ namespace Day9_EmployeeWage
             return false;
         }
 
+        public int DailyWage(int hour,int wage)
+        {
+            int dailyWage = hour * wage;
+            return dailyWage;
+        }
     }
 }
