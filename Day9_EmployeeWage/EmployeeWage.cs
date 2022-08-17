@@ -20,16 +20,18 @@ namespace Day9_EmployeeWage
             return dailyWage;
         }
 
-        public void WageOfEmployee(int fullDayHour, int partTimeHour, int wagePerHour)
+        public void WageOfEmployee(string companyName,int maxWorkingHour, int maxWorkingDay, int wagePerHour)
         {
+            int fullDayHour = 8;
+            int partTimeHour = 4;
             int workingHour = 0;
             int workingDay = 0;
 
-
-
             EmployeeWage Employee = new();
-            
-            while (workingHour <= 100 || workingDay <= 20)
+            Console.WriteLine("\n\n\nCompany Name is :{0}\n\n\n",companyName);
+
+
+            while (workingHour <= maxWorkingHour || workingDay <= maxWorkingDay)
             {
                 switch (Employee.IsPresent())
                 {

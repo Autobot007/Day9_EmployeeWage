@@ -14,12 +14,16 @@
 
         public void Wage()
         {
+            Console.WriteLine("Enter Company name");
+            string companyName = Console.ReadLine();
+            Console.WriteLine("Enter Maximum working hour in company");
+            int maxWorkingHour = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Enter Maximum working day in company");
+            int maxWorkingDay = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Enter wage per hour as per company");
+            int wagePerHour = Convert.ToInt16(Console.ReadLine());
 
-            int fullDayHour = 8;
-            int partTimeHour = 4;
-            int wagePerHour = 20;
-
-            wageobj.WageOfEmployee(fullDayHour, partTimeHour, wagePerHour); 
+            wageobj.WageOfEmployee(companyName,maxWorkingHour, maxWorkingDay, wagePerHour); 
         }
         
         
